@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="nmdp_speech_kit">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/app/libs/nmdp_speech_kit.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
