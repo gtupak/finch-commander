@@ -1,6 +1,11 @@
 # Nuance credentials
 Configuration.java
 
+# IntelliJ
+.idea/workspace.xml
+.idea/libraries
+.DS_Store
+
 # Built application files
 *.apk
 *.ap_
