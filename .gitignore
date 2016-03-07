@@ -2,8 +2,7 @@
 Configuration.java
 
 # IntelliJ
-.idea/workspace.xml
-.idea/libraries
+.idea/*
 .DS_Store
 
 # Built application files

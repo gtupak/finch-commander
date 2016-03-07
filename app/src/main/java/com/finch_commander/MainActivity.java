@@ -28,6 +28,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.Set;
 import java.util.UUID;
+import java.util.concurrent.CountDownLatch;
 
 /**
  * NOTE: Configuration class can be made from the Nuance sample app
@@ -53,10 +54,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Transaction recTransaction;
 
     private BluetoothAdapter mBluetoothAdapter;
-    private Set<BluetoothDevice> pairedDevices;
+    private Set<BluetoothDevice> mPairedDevices;
     private final UUID uuid = UUID.fromString("40850b4a-de88-11e5-b86d-9a79f06e9478"); //UUID.fromString("40850b4a-de88-11e5-b86d-9a79f06e9478");
 
     private ConnectedThread mConnectedThread;
+    private final CountDownLatch latch = new CountDownLatch(1);
 
     private final int REQUEST_ENABLE_BT = 1;
     private final int MESSAGE_READ = 11;
@@ -82,40 +84,47 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         // Set up Bluetooth
         mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
-        setUpBluetooth();
-
-        // Find Bluetooth device that is the Finch server
-        BluetoothDevice finchServerDevice = null;
-        if (pairedDevices == null) {
-            logger.append("\nERROR: No paired devices available.");
+        if (mBluetoothAdapter == null) {
+            // Device does not support Bluetooth
+            logger.append("\nERROR: Device does not support Bluetooth.");
             return;
         }
 
-        finchServerDevice = findFinchServer(pairedDevices);
+        // Get the paired devices
+        mPairedDevices = getPairedDevices();
+        if (mPairedDevices == null) {
+            logger.append("\nERROR: No paired devices available.");
+            return;
+        }
+        logger.append("\nPaired devices acquired. Number of devices: " + mPairedDevices.size());
+
+        // Find Bluetooth device that is the Finch server
+        BluetoothDevice finchServerDevice = findFinchServer(mPairedDevices);
         if (finchServerDevice == null) {
             logger.append("\nERROR: Could not find device with required UUID. Our UUID variant : " + uuid.variant());
             return;
         }
+        logger.append("\n===FINCH SERVER FOUND===");
 
         // Connect to device
         ConnectThread connectThread = new ConnectThread(finchServerDevice);
-        // Connect and send a test command (see the run() code)
+        // Connect
         connectThread.start();
-        logger.append("\nConnection successfully established with " + connectThread.mmSocket.getRemoteDevice().getName());
+        try {
+            logger.append("\nWaiting for ConnectThread to notify");
+            latch.await();
+            mConnectedThread = connectThread.getConnectedThread();
+            if(mConnectedThread == null) {
+                logger.append("\nCould not establish a connection to the finch server. Server might be down.");
+                return;
+            }
+            logger.append("\nConnection successfully established with " + connectThread.mmSocket.getRemoteDevice().getName());
+        } catch (InterruptedException ex) {
+            logger.append("\nEXCEPTION CAUGHT: " + ex.getMessage());
+        }
     }
 
-    /**
-     * Used for managing connection - transferring data
-     */
-    public void manageConnectedSocket(BluetoothSocket btSocket) {
-        ConnectedThread connectedThread = new ConnectedThread(btSocket);
-        connectedThread.start();
 
-        // Send test command to the server
-        mConnectedThread = connectedThread;
-//        String testCommand = "COMMAND: ---SUCCESS---";
-//        connectedThread.write(testCommand.getBytes());
-    }
 
     @Override
     public void onClick(View v) {
@@ -123,7 +132,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             toggleRec();
         }
         else if (v == showDevicesButton) {
-            getPairedDevicesAndPrint();
+            // getPairedDevices();
+            displayDevices(mPairedDevices);
         }
         else if (v == sendMsgButton) {
             if (mConnectedThread != null) {
@@ -138,7 +148,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (requestCode == REQUEST_ENABLE_BT) {
             if (resultCode == RESULT_OK) {
                 logger.append("\nBluetooth successfully turned on.\nAcquiring paired devices...");
-                getPairedDevicesAndPrint();
+                mPairedDevices = getPairedDevices();
             }
             else {
                 logger.append("\nERROR: Bluetooth has to be turned on.");
@@ -174,33 +184,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     };
 
     /**
-     * Sets up Bluetooth and connectivity
+     * Gets paired devices
      */
-    private void setUpBluetooth() {
-        if (mBluetoothAdapter == null) {
-            // Device does not support Bluetooth
-        }
+    private Set<BluetoothDevice> getPairedDevices() {
+
+        Set<BluetoothDevice> pairedDevices = null;
 
         // Make sure Bluetooth is enabled
-        if (!mBluetoothAdapter.isEnabled()) {
+        if (mBluetoothAdapter.isEnabled()) {
+            // Clear logger
+            logger.setText("");
+
+            // Get paired devices
+            pairedDevices = mBluetoothAdapter.getBondedDevices();
+        }
+        else {
             Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
             startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
         }
-        else {
-            getPairedDevicesAndPrint();
-        }
-    }
-
-    /**
-     * Gets paired devices and displays them in the logger
-     */
-    private void getPairedDevicesAndPrint() {
-        // Clear logger
-        logger.setText("");
-
-        // Get paired devices
-        pairedDevices = mBluetoothAdapter.getBondedDevices();
-        logger.append("\nPaired devices acquired. Number of devices: " + pairedDevices.size());
+        return pairedDevices;
     }
 
     private void displayDevices(Set<BluetoothDevice> devices) {
@@ -208,7 +210,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             logger.append("\n" + bluetoothDevice.getName());
             ParcelUuid deviceUuids[] =  bluetoothDevice.getUuids();
             for (ParcelUuid parcelUuid : deviceUuids) {
-                logger.append("\n    Variant: " + parcelUuid.getUuid().variant());
+                logger.append("\n" + parcelUuid.getUuid().toString() + "    Variant: " + parcelUuid.getUuid().variant());
             }
         }
     }
@@ -291,7 +293,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         @Override
         public void onRecognition(Transaction transaction, Recognition recognition){
-            logger.append("\nYou said: " + recognition.getText());
+            String toSend = recognition.getText();
+            logger.append("\nSending to server: " + toSend);
+            mConnectedThread.write(toSend.getBytes());
             setState(State.IDLE);
         }
 
@@ -333,13 +337,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         IDLE,
         LISTENING,
         PROCESSING
-    }
-
-    /**
-     * Commands for socket managing
-     */
-    private enum Command {
-        SEND_MESSAGE
     }
 
     /**
@@ -410,6 +407,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private class ConnectThread extends Thread {
         private final BluetoothSocket mmSocket;
         private final BluetoothDevice mmDevice;
+        private ConnectedThread mmConnectedThread = null;
 
         public ConnectThread(BluetoothDevice device) {
             // Use a temporary object that is later assigned to mmSocket,
@@ -443,6 +441,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 } catch (IOException closeException) {
                     logger.append("\nERROR: Unable to close socket.");
                 }
+                latch.countDown();
                 return;
             }
 
@@ -459,6 +458,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             } catch (IOException e) {
                 logger.append("\nERROR: Unable to cancel connection.");
             }
+        }
+
+        /**
+         * Used for managing connection - transferring data
+         */
+        private void manageConnectedSocket(BluetoothSocket btSocket) {
+            mmConnectedThread = new ConnectedThread(btSocket);
+            mmConnectedThread.start();
+            // Notify the main thread so that it can call getConnectedThread()
+            latch.countDown();
+        }
+
+        public ConnectedThread getConnectedThread() {
+            return mmConnectedThread;
         }
     }
 }
