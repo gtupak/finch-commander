@@ -13,12 +13,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/scrollView"
-        android:layout_below="@+id/textView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_above="@+id/toggleRec"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" >
+        android:layout_above="@+id/sendMsgButton"
+        android:layout_below="@+id/toggleRec">
 
         <TextView
             android:layout_width="wrap_content"
@@ -30,22 +30,35 @@
             android:layout_alignParentStart="true" />
     </ScrollView>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Record"
-        android:id="@+id/toggleRec"
-        android:textSize="20dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Voice recognition log: "
+        android:text="Finch Commander"
         android:id="@+id/textView"
-        android:textSize="30dp" />
+        android:textSize="30dp"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:focusable="false" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:id="@+id/imageView"
+        android:src="@mipmap/finch_commander_logo"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Command to the Finch"
+        android:id="@+id/toggleRec"
+        android:textSize="20dp"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="wrap_content"
@@ -63,8 +76,8 @@
         android:layout_height="wrap_content"
         android:text="Send &apos;Hello World&apos;"
         android:id="@+id/sendMsgButton"
-        android:layout_above="@+id/showDevicesButton"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignTop="@+id/showDevicesButton"
+        android:layout_toLeftOf="@+id/showDevicesButton"
+        android:layout_toStartOf="@+id/showDevicesButton" />
 
 </RelativeLayout>
