@@ -1,5 +1,6 @@
 package com.finch_commander;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Handler;
 import android.os.Message;
@@ -37,13 +38,13 @@ import java.util.concurrent.CountDownLatch;
  * Sample app at: https://developer.nuance.com/public/index.php?task=prodDev
  */
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends Activity implements View.OnClickListener {
 
     private State state = State.IDLE;
 
     private Button toggleRec;
     private Button showDevicesButton;
-    private Button sendMsgButton;
+//    private Button sendMsgButton;
     private TextView logger;
 
     private Audio startEarcon;
@@ -72,8 +73,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         toggleRec.setOnClickListener(this);
         showDevicesButton = (Button) findViewById(R.id.showDevicesButton);
         showDevicesButton.setOnClickListener(this);
-        sendMsgButton = (Button) findViewById(R.id.sendMsgButton);
-        sendMsgButton.setOnClickListener(this);
+//        sendMsgButton = (Button) findViewById(R.id.sendMsgButton);
+//        sendMsgButton.setOnClickListener(this);
 
         logger = (TextView)findViewById(R.id.logger);
 
@@ -135,12 +136,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             // getPairedDevices();
             displayDevices(mPairedDevices);
         }
-        else if (v == sendMsgButton) {
-            if (mConnectedThread != null) {
-                String testCommand = "COMMAND: ---SUCCESS---";
-                mConnectedThread.write(testCommand.getBytes());
-            }
-        }
+//        else if (v == sendMsgButton) {
+//            if (mConnectedThread != null) {
+//                String testCommand = "COMMAND: ---SUCCESS---";
+//                mConnectedThread.write(testCommand.getBytes());
+//            }
+//        }
     }
 
     @Override
@@ -294,6 +295,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         @Override
         public void onRecognition(Transaction transaction, Recognition recognition){
             String toSend = recognition.getText();
+            if (mConnectedThread == null) {
+                logger.append("\nERROR: Not connected to the server. You said" + toSend);
+                setState(State.IDLE);
+                return;
+            }
             logger.append("\nSending to server: " + toSend);
             mConnectedThread.write(toSend.getBytes());
             setState(State.IDLE);

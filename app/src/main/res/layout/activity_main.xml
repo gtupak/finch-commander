@@ -17,8 +17,8 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_above="@+id/sendMsgButton"
-        android:layout_below="@+id/toggleRec">
+        android:layout_below="@+id/toggleRec"
+        android:layout_above="@+id/showDevicesButton">
 
         <TextView
             android:layout_width="wrap_content"
@@ -63,21 +63,10 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Show Devices"
+        android:text="Show available devices"
         android:id="@+id/showDevicesButton"
+        android:textSize="20dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:textSize="20dp" />
-
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Send &apos;Hello World&apos;"
-        android:id="@+id/sendMsgButton"
-        android:layout_alignTop="@+id/showDevicesButton"
-        android:layout_toLeftOf="@+id/showDevicesButton"
-        android:layout_toStartOf="@+id/showDevicesButton" />
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
