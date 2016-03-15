@@ -7,6 +7,8 @@ import android.os.Message;
 import android.os.ParcelUuid;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -73,8 +75,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
         toggleRec.setOnClickListener(this);
         showDevicesButton = (Button) findViewById(R.id.showDevicesButton);
         showDevicesButton.setOnClickListener(this);
-//        sendMsgButton = (Button) findViewById(R.id.sendMsgButton);
-//        sendMsgButton.setOnClickListener(this);
 
         logger = (TextView)findViewById(R.id.logger);
 
@@ -91,6 +91,70 @@ public class MainActivity extends Activity implements View.OnClickListener {
             return;
         }
 
+        logger.append("Welcome to the Finch Commander!\nTo connect, click on menu and select the 'Connect' option.");
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+
+        return true;
+    }
+
+    /**
+     * Called when one of the menu items has been clicked
+     */
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.menu_connect) {
+            logger.clearComposingText();
+            connect();
+        } else if (id == R.id.menu_clearText) {
+            logger.setText(""); // logger.clearComposingText(); does not clear the logger here..
+        }
+        return false;
+    }
+
+    @Override
+    public void onClick(View v) {
+        if (v == toggleRec){
+            toggleRec();
+        }
+        else if (v == showDevicesButton) {
+            // getPairedDevices();
+            if (mPairedDevices == null) {
+                logger.append("\nERROR: No paired devices available");
+                return;
+            }
+            logger.clearComposingText();
+            displayDevices(mPairedDevices);
+        }
+//        else if (v == sendMsgButton) {
+//            if (mConnectedThread != null) {
+//                String testCommand = "COMMAND: ---SUCCESS---";
+//                mConnectedThread.write(testCommand.getBytes());
+//            }
+//        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == REQUEST_ENABLE_BT) {
+            if (resultCode == RESULT_OK) {
+                logger.append("\nBluetooth successfully turned on.\nAcquiring paired devices...");
+                mPairedDevices = getPairedDevices();
+            }
+            else {
+                logger.append("\nERROR: Bluetooth has to be turned on.");
+            }
+        }
+    }
+
+    /**
+     * Method used to find and connect to the Finch server.
+     */
+    private void connect() {
         // Get the paired devices
         mPairedDevices = getPairedDevices();
         if (mPairedDevices == null) {
@@ -122,38 +186,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
             logger.append("\nConnection successfully established with " + connectThread.mmSocket.getRemoteDevice().getName());
         } catch (InterruptedException ex) {
             logger.append("\nEXCEPTION CAUGHT: " + ex.getMessage());
-        }
-    }
-
-
-
-    @Override
-    public void onClick(View v) {
-        if (v == toggleRec){
-            toggleRec();
-        }
-        else if (v == showDevicesButton) {
-            // getPairedDevices();
-            displayDevices(mPairedDevices);
-        }
-//        else if (v == sendMsgButton) {
-//            if (mConnectedThread != null) {
-//                String testCommand = "COMMAND: ---SUCCESS---";
-//                mConnectedThread.write(testCommand.getBytes());
-//            }
-//        }
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == REQUEST_ENABLE_BT) {
-            if (resultCode == RESULT_OK) {
-                logger.append("\nBluetooth successfully turned on.\nAcquiring paired devices...");
-                mPairedDevices = getPairedDevices();
-            }
-            else {
-                logger.append("\nERROR: Bluetooth has to be turned on.");
-            }
         }
     }
 
@@ -207,13 +239,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
     }
 
     private void displayDevices(Set<BluetoothDevice> devices) {
-        for (BluetoothDevice bluetoothDevice : devices) {
-            logger.append("\n" + bluetoothDevice.getName());
-            ParcelUuid deviceUuids[] =  bluetoothDevice.getUuids();
-            for (ParcelUuid parcelUuid : deviceUuids) {
-                logger.append("\n" + parcelUuid.getUuid().toString() + "    Variant: " + parcelUuid.getUuid().variant());
+            for (BluetoothDevice bluetoothDevice : devices) {
+                logger.append("\n" + bluetoothDevice.getName());
+                ParcelUuid deviceUuids[] = bluetoothDevice.getUuids();
+                for (ParcelUuid parcelUuid : deviceUuids) {
+                    logger.append("\n" + parcelUuid.getUuid().toString() + "    Variant: " + parcelUuid.getUuid().variant());
+                }
             }
-        }
     }
 
     /**
@@ -296,7 +328,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         public void onRecognition(Transaction transaction, Recognition recognition){
             String toSend = recognition.getText();
             if (mConnectedThread == null) {
-                logger.append("\nERROR: Not connected to the server. You said" + toSend);
+                logger.append("\nERROR: Not connected to the server. You said: " + toSend);
                 setState(State.IDLE);
                 return;
             }
@@ -335,6 +367,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         recTransaction.cancel();
         setState(State.IDLE);
     }
+
+
 
     /**
      * Different states for Nuance's API
@@ -441,11 +475,11 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 mmSocket.connect();
             } catch (IOException connectException) {
                 // Unable to connect; close the socket and get out
-                logger.append("\nERROR: Unable to connect. Closing the socket.");
+//                logger.append("\nERROR: Unable to connect. Closing the socket."); // TODO Can't run because it is not the original thread
                 try {
                     mmSocket.close();
                 } catch (IOException closeException) {
-                    logger.append("\nERROR: Unable to close socket.");
+//                    logger.append("\nERROR: Unable to close socket."); // TODO Can't run because it is not the original thread
                 }
                 latch.countDown();
                 return;

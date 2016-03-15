@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Finch_Commander</string>
+    <string name="app_name">Finch Commander</string>
+    <string name="action_settings">Connect</string>
+    <string name="menu_clearTextTitle">Clear log</string>
 </resources>

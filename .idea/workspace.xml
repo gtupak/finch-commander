@@ -11,7 +11,12 @@
     <layouts>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
         <config>
-          <theme>@android:style/Theme.Material.NoActionBar</theme>
+          <theme>@android:style/Theme.Material.Light.LightStatusBar</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/menu/menu_main.xml">
+        <config>
+          <theme>@android:style/Theme.Material.Light</theme>
         </config>
       </layout>
     </layouts>
@@ -20,7 +25,15 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b17abdc-90ee-4ebd-8681-f79dc7785a7d" name="Default" comment="" />
+    <list default="true" id="6b17abdc-90ee-4ebd-8681-f79dc7785a7d" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/menu/menu_main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/finch_commander/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/finch_commander/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="Finch_Commander.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,12 +63,11 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/finch_commander/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8455882">
-              <caret line="289" column="64" selection-start-line="289" selection-start-column="64" selection-end-line="289" selection-end-column="64" />
+            <state vertical-scroll-proportion="1.0718563">
+              <caret line="113" column="96" selection-start-line="113" selection-start-column="96" selection-end-line="113" selection-end-column="96" />
               <folding>
                 <element signature="docComment;class#MainActivity#0" expanded="false" />
-                <element signature="method#onActivityResult#0;class#MainActivity#0" expanded="false" />
-                <element signature="docComment;method#findFinchServer#0;class#MainActivity#0" expanded="false" />
+                <element signature="e#4181#4221#0" expanded="false" />
                 <element signature="method#findFinchServer#0;class#MainActivity#0" expanded="false" />
                 <element signature="docComment;method#getPairedDevices#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#getPairedDevices#0;class#MainActivity#0" expanded="false" />
@@ -65,20 +77,26 @@
                 <element signature="docComment;method#loadEarcons#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#loadEarcons#0;class#MainActivity#0" expanded="false" />
                 <element signature="docComment;method#toggleRec#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#toggleRec#0;class#MainActivity#0" expanded="false" />
                 <element signature="docComment;method#recognize#0;class#MainActivity#0" expanded="false" />
                 <element signature="docComment;field#recListener#0;class#MainActivity#0" expanded="false" />
-                <element signature="method#onSuccess#0;class#9447:11009" expanded="false" />
-                <element signature="method#onError#0;class#9447:11009" expanded="false" />
-                <element signature="e#10723#10813#0" expanded="false" />
+                <element signature="class#10453:12017" expanded="false" />
+                <element signature="method#onStartedRecording#0;class#10453:12017" expanded="false" />
+                <element signature="method#onFinishedRecording#0;class#10453:12017" expanded="false" />
+                <element signature="method#onRecognition#0;class#10453:12017" expanded="false" />
+                <element signature="method#onSuccess#0;class#10453:12017" expanded="false" />
+                <element signature="method#onError#0;class#10453:12017" expanded="false" />
+                <element signature="e#11731#11821#0" expanded="false" />
                 <element signature="docComment;method#stopRecording#0;class#MainActivity#0" expanded="false" />
-                <element signature="e#11091#11092#0" expanded="true" />
-                <element signature="e#11137#11138#0" expanded="true" />
-                <element signature="method#cancel#0;class#MainActivity#0" expanded="false" />
+                <element signature="e#12099#12100#0" expanded="true" />
+                <element signature="e#12145#12146#0" expanded="true" />
+                <element signature="docComment;method#cancel#0;class#MainActivity#0" expanded="false" />
                 <element signature="docComment;class#State#0;class#MainActivity#0" expanded="false" />
                 <element signature="class#State#0;class#MainActivity#0" expanded="false" />
+                <element signature="docComment;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
                 <element signature="class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#ConnectedThread#0;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
-                <element signature="e#11908#11971#0" expanded="false" />
+                <element signature="e#12918#12981#0" expanded="false" />
                 <element signature="method#run#0;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
                 <element signature="docComment;method#write#0;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#write#0;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
@@ -86,8 +104,8 @@
                 <element signature="method#cancel#0;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
                 <element signature="docComment;class#ConnectThread#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#ConnectThread#0;class#ConnectThread#0;class#MainActivity#0" expanded="false" />
-                <element signature="e#13778#13839#0" expanded="false" />
-                <element signature="e#14582#14639#0" expanded="false" />
+                <element signature="e#14788#14849#0" expanded="false" />
+                <element signature="e#15592#15649#0" expanded="false" />
                 <element signature="docComment;method#cancel#0;class#ConnectThread#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#cancel#0;class#ConnectThread#0;class#MainActivity#0" expanded="false" />
                 <element signature="docComment;method#manageConnectedSocket#0;class#ConnectThread#0;class#MainActivity#0" expanded="false" />
@@ -97,36 +115,47 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activity_main.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-          <provider selected="true" editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider editor-type-id="text-editor">
+      <file leaf-file-name="TextView.java" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Android/Sdk/sources/android-23/android/widget/TextView.java">
+          <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="58" column="31" selection-start-line="58" selection-start-column="31" selection-end-line="58" selection-end-column="31" />
+              <caret line="8249" column="0" selection-start-line="8249" selection-start-column="0" selection-end-line="8249" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <file leaf-file-name="activity_main.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+          <provider editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="43" column="4" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="menu_main.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/menu_main.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+              <caret line="11" column="39" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="39" />
               <folding>
-                <element signature="e#270#288#0" expanded="true" />
+                <element signature="e#355#380#0" expanded="true" />
+                <element signature="e#527#556#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="styles.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.862069">
-              <caret line="3" column="25" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -139,8 +168,12 @@
       <list>
         <option value="Singleton" />
         <option value="Class" />
+        <option value="resourceFile" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="availableProjects">
@@ -1326,7 +1359,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="4370712878214" />
+        <entry key="$PROJECT_DIR$" value="4370714762482" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -1692,10 +1725,12 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/finch_commander/ConnectThread.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/finch_commander/Utilities.java" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
-        <option value="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/menu/menu_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/finch_commander/MainActivity.java" />
       </list>
     </option>
@@ -1709,7 +1744,7 @@
     <option name="width" value="1368" />
     <option name="height" value="745" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -1732,7 +1767,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -1839,19 +1874,19 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="030449ad09377f1e" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Nexus_5_API_23" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app/libs/speechkit-2.1.2-javadoc.jar" />
-    <property name="android.project.structure.last.selected" value="app" />
+    <property name="android.project.structure.last.selected" value="SDK Location" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
@@ -2050,7 +2085,7 @@
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991317" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2977273" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.6632479" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -2070,7 +2105,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23636363" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852563" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32820514" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -2082,33 +2117,33 @@
     <layout-to-restore>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1570248" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3846154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32857144" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32857144" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852563" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3133386" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23636363" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32820514" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991317" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991317" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6698413" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6632479" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3965812" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32857144" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32820514" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -2125,18 +2160,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/finch_commander/MainActivity.java</url>
-          <line>132</line>
-          <properties />
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="13" />
+      <option name="time" value="14" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -2144,11 +2171,10 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/finch_commander/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="144" column="0" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="docComment;class#MainActivity#0" expanded="false" />
-            <element signature="method#onActivityResult#0;class#MainActivity#0" expanded="false" />
-            <element signature="docComment;method#findFinchServer#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#4181#4221#0" expanded="false" />
             <element signature="method#findFinchServer#0;class#MainActivity#0" expanded="false" />
             <element signature="docComment;method#getPairedDevices#0;class#MainActivity#0" expanded="false" />
             <element signature="method#getPairedDevices#0;class#MainActivity#0" expanded="false" />
@@ -2158,20 +2184,26 @@
             <element signature="docComment;method#loadEarcons#0;class#MainActivity#0" expanded="false" />
             <element signature="method#loadEarcons#0;class#MainActivity#0" expanded="false" />
             <element signature="docComment;method#toggleRec#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#toggleRec#0;class#MainActivity#0" expanded="false" />
             <element signature="docComment;method#recognize#0;class#MainActivity#0" expanded="false" />
             <element signature="docComment;field#recListener#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onSuccess#0;class#9447:11009" expanded="false" />
-            <element signature="method#onError#0;class#9447:11009" expanded="false" />
-            <element signature="e#10723#10813#0" expanded="false" />
+            <element signature="class#10453:12017" expanded="false" />
+            <element signature="method#onStartedRecording#0;class#10453:12017" expanded="false" />
+            <element signature="method#onFinishedRecording#0;class#10453:12017" expanded="false" />
+            <element signature="method#onRecognition#0;class#10453:12017" expanded="false" />
+            <element signature="method#onSuccess#0;class#10453:12017" expanded="false" />
+            <element signature="method#onError#0;class#10453:12017" expanded="false" />
+            <element signature="e#11731#11821#0" expanded="false" />
             <element signature="docComment;method#stopRecording#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#11091#11092#0" expanded="true" />
-            <element signature="e#11137#11138#0" expanded="true" />
-            <element signature="method#cancel#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#12099#12100#0" expanded="true" />
+            <element signature="e#12145#12146#0" expanded="true" />
+            <element signature="docComment;method#cancel#0;class#MainActivity#0" expanded="false" />
             <element signature="docComment;class#State#0;class#MainActivity#0" expanded="false" />
             <element signature="class#State#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
             <element signature="class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
             <element signature="method#ConnectedThread#0;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#11908#11971#0" expanded="false" />
+            <element signature="e#12918#12981#0" expanded="false" />
             <element signature="method#run#0;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
             <element signature="docComment;method#write#0;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
             <element signature="method#write#0;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
@@ -2179,8 +2211,8 @@
             <element signature="method#cancel#0;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
             <element signature="docComment;class#ConnectThread#0;class#MainActivity#0" expanded="false" />
             <element signature="method#ConnectThread#0;class#ConnectThread#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#13778#13839#0" expanded="false" />
-            <element signature="e#14582#14639#0" expanded="false" />
+            <element signature="e#14788#14849#0" expanded="false" />
+            <element signature="e#15592#15649#0" expanded="false" />
             <element signature="docComment;method#cancel#0;class#ConnectThread#0;class#MainActivity#0" expanded="false" />
             <element signature="method#cancel#0;class#ConnectThread#0;class#MainActivity#0" expanded="false" />
             <element signature="docComment;method#manageConnectedSocket#0;class#ConnectThread#0;class#MainActivity#0" expanded="false" />
@@ -2190,70 +2222,254 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="58" column="31" selection-start-line="58" selection-start-column="31" selection-end-line="58" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
       <provider selected="true" editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/finch_commander/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="298" column="79" selection-start-line="298" selection-start-column="79" selection-end-line="298" selection-end-column="79" />
+          <folding>
+            <element signature="docComment;class#MainActivity#0" expanded="false" />
+            <element signature="e#4181#4221#0" expanded="false" />
+            <element signature="method#findFinchServer#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#getPairedDevices#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#getPairedDevices#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#displayDevices#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#setState#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#setState#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#loadEarcons#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#loadEarcons#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#toggleRec#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#toggleRec#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#recognize#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;field#recListener#0;class#MainActivity#0" expanded="false" />
+            <element signature="class#10453:12017" expanded="false" />
+            <element signature="method#onStartedRecording#0;class#10453:12017" expanded="false" />
+            <element signature="method#onFinishedRecording#0;class#10453:12017" expanded="false" />
+            <element signature="method#onRecognition#0;class#10453:12017" expanded="false" />
+            <element signature="method#onSuccess#0;class#10453:12017" expanded="false" />
+            <element signature="method#onError#0;class#10453:12017" expanded="false" />
+            <element signature="e#11731#11821#0" expanded="false" />
+            <element signature="docComment;method#stopRecording#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#12099#12100#0" expanded="true" />
+            <element signature="e#12145#12146#0" expanded="true" />
+            <element signature="docComment;method#cancel#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;class#State#0;class#MainActivity#0" expanded="false" />
+            <element signature="class#State#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
+            <element signature="class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#ConnectedThread#0;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#12918#12981#0" expanded="false" />
+            <element signature="method#run#0;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#write#0;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#write#0;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#cancel#0;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#cancel#0;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;class#ConnectThread#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#ConnectThread#0;class#ConnectThread#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#14788#14849#0" expanded="false" />
+            <element signature="e#15592#15649#0" expanded="false" />
+            <element signature="docComment;method#cancel#0;class#ConnectThread#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#cancel#0;class#ConnectThread#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#manageConnectedSocket#0;class#ConnectThread#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#manageConnectedSocket#0;class#ConnectThread#0;class#MainActivity#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="58" column="31" selection-start-line="58" selection-start-column="31" selection-end-line="58" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/finch_commander/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#MainActivity#0" expanded="false" />
+            <element signature="e#4181#4221#0" expanded="false" />
+            <element signature="method#findFinchServer#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#getPairedDevices#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#getPairedDevices#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#displayDevices#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#setState#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#setState#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#loadEarcons#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#loadEarcons#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#toggleRec#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#toggleRec#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#recognize#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;field#recListener#0;class#MainActivity#0" expanded="false" />
+            <element signature="class#10453:12017" expanded="false" />
+            <element signature="method#onStartedRecording#0;class#10453:12017" expanded="false" />
+            <element signature="method#onFinishedRecording#0;class#10453:12017" expanded="false" />
+            <element signature="method#onRecognition#0;class#10453:12017" expanded="false" />
+            <element signature="method#onSuccess#0;class#10453:12017" expanded="false" />
+            <element signature="method#onError#0;class#10453:12017" expanded="false" />
+            <element signature="e#11731#11821#0" expanded="false" />
+            <element signature="docComment;method#stopRecording#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#12099#12100#0" expanded="true" />
+            <element signature="e#12145#12146#0" expanded="true" />
+            <element signature="docComment;method#cancel#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;class#State#0;class#MainActivity#0" expanded="false" />
+            <element signature="class#State#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
+            <element signature="class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#ConnectedThread#0;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#12918#12981#0" expanded="false" />
+            <element signature="method#run#0;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#write#0;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#write#0;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#cancel#0;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#cancel#0;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;class#ConnectThread#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#ConnectThread#0;class#ConnectThread#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#14788#14849#0" expanded="false" />
+            <element signature="e#15592#15649#0" expanded="false" />
+            <element signature="docComment;method#cancel#0;class#ConnectThread#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#cancel#0;class#ConnectThread#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#manageConnectedSocket#0;class#ConnectThread#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#manageConnectedSocket#0;class#ConnectThread#0;class#MainActivity#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="58" column="31" selection-start-line="58" selection-start-column="31" selection-end-line="58" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="25" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/finch_commander/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="144" column="0" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#MainActivity#0" expanded="false" />
+            <element signature="e#4181#4221#0" expanded="false" />
+            <element signature="method#findFinchServer#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#getPairedDevices#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#getPairedDevices#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#displayDevices#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#setState#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#setState#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#loadEarcons#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#loadEarcons#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#toggleRec#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#toggleRec#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#recognize#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;field#recListener#0;class#MainActivity#0" expanded="false" />
+            <element signature="class#10453:12017" expanded="false" />
+            <element signature="method#onStartedRecording#0;class#10453:12017" expanded="false" />
+            <element signature="method#onFinishedRecording#0;class#10453:12017" expanded="false" />
+            <element signature="method#onRecognition#0;class#10453:12017" expanded="false" />
+            <element signature="method#onSuccess#0;class#10453:12017" expanded="false" />
+            <element signature="method#onError#0;class#10453:12017" expanded="false" />
+            <element signature="e#11731#11821#0" expanded="false" />
+            <element signature="docComment;method#stopRecording#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#12099#12100#0" expanded="true" />
+            <element signature="e#12145#12146#0" expanded="true" />
+            <element signature="docComment;method#cancel#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;class#State#0;class#MainActivity#0" expanded="false" />
+            <element signature="class#State#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
+            <element signature="class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#ConnectedThread#0;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#12918#12981#0" expanded="false" />
+            <element signature="method#run#0;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#write#0;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#write#0;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#cancel#0;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#cancel#0;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;class#ConnectThread#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#ConnectThread#0;class#ConnectThread#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#14788#14849#0" expanded="false" />
+            <element signature="e#15592#15649#0" expanded="false" />
+            <element signature="docComment;method#cancel#0;class#ConnectThread#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#cancel#0;class#ConnectThread#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#manageConnectedSocket#0;class#ConnectThread#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#manageConnectedSocket#0;class#ConnectThread#0;class#MainActivity#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/finch_commander/Configuration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="51" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/finch_commander/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;class#MainActivity#0" expanded="false" />
-            <element signature="method#onActivityResult#0;class#MainActivity#0" expanded="false" />
-            <element signature="docComment;method#findFinchServer#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#findFinchServer#0;class#MainActivity#0" expanded="false" />
-            <element signature="docComment;method#getPairedDevices#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#getPairedDevices#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#displayDevices#0;class#MainActivity#0" expanded="false" />
-            <element signature="docComment;method#setState#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#setState#0;class#MainActivity#0" expanded="false" />
-            <element signature="docComment;method#loadEarcons#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#loadEarcons#0;class#MainActivity#0" expanded="false" />
-            <element signature="docComment;method#toggleRec#0;class#MainActivity#0" expanded="false" />
-            <element signature="docComment;method#recognize#0;class#MainActivity#0" expanded="false" />
-            <element signature="docComment;field#recListener#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onSuccess#0;class#9447:11009" expanded="false" />
-            <element signature="method#onError#0;class#9447:11009" expanded="false" />
-            <element signature="e#10723#10813#0" expanded="false" />
-            <element signature="docComment;method#stopRecording#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#11091#11092#0" expanded="true" />
-            <element signature="e#11137#11138#0" expanded="true" />
-            <element signature="method#cancel#0;class#MainActivity#0" expanded="false" />
-            <element signature="docComment;class#State#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#State#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#ConnectedThread#0;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#11908#11971#0" expanded="false" />
-            <element signature="method#run#0;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
-            <element signature="docComment;method#write#0;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#write#0;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
-            <element signature="docComment;method#cancel#0;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#cancel#0;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
-            <element signature="docComment;class#ConnectThread#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#ConnectThread#0;class#ConnectThread#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#13778#13839#0" expanded="false" />
-            <element signature="e#14582#14639#0" expanded="false" />
-            <element signature="docComment;method#cancel#0;class#ConnectThread#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#cancel#0;class#ConnectThread#0;class#MainActivity#0" expanded="false" />
-            <element signature="docComment;method#manageConnectedSocket#0;class#ConnectThread#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#manageConnectedSocket#0;class#ConnectThread#0;class#MainActivity#0" expanded="false" />
-          </folding>
-        </state>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/finch_commander/Configuration.java">
@@ -2270,8 +2486,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="docComment;class#MainActivity#0" expanded="false" />
-            <element signature="method#onActivityResult#0;class#MainActivity#0" expanded="false" />
-            <element signature="docComment;method#findFinchServer#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#4181#4221#0" expanded="false" />
             <element signature="method#findFinchServer#0;class#MainActivity#0" expanded="false" />
             <element signature="docComment;method#getPairedDevices#0;class#MainActivity#0" expanded="false" />
             <element signature="method#getPairedDevices#0;class#MainActivity#0" expanded="false" />
@@ -2281,20 +2496,26 @@
             <element signature="docComment;method#loadEarcons#0;class#MainActivity#0" expanded="false" />
             <element signature="method#loadEarcons#0;class#MainActivity#0" expanded="false" />
             <element signature="docComment;method#toggleRec#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#toggleRec#0;class#MainActivity#0" expanded="false" />
             <element signature="docComment;method#recognize#0;class#MainActivity#0" expanded="false" />
             <element signature="docComment;field#recListener#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onSuccess#0;class#9447:11009" expanded="false" />
-            <element signature="method#onError#0;class#9447:11009" expanded="false" />
-            <element signature="e#10723#10813#0" expanded="false" />
+            <element signature="class#10453:12017" expanded="false" />
+            <element signature="method#onStartedRecording#0;class#10453:12017" expanded="false" />
+            <element signature="method#onFinishedRecording#0;class#10453:12017" expanded="false" />
+            <element signature="method#onRecognition#0;class#10453:12017" expanded="false" />
+            <element signature="method#onSuccess#0;class#10453:12017" expanded="false" />
+            <element signature="method#onError#0;class#10453:12017" expanded="false" />
+            <element signature="e#11731#11821#0" expanded="false" />
             <element signature="docComment;method#stopRecording#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#11091#11092#0" expanded="true" />
-            <element signature="e#11137#11138#0" expanded="true" />
-            <element signature="method#cancel#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#12099#12100#0" expanded="true" />
+            <element signature="e#12145#12146#0" expanded="true" />
+            <element signature="docComment;method#cancel#0;class#MainActivity#0" expanded="false" />
             <element signature="docComment;class#State#0;class#MainActivity#0" expanded="false" />
             <element signature="class#State#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
             <element signature="class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
             <element signature="method#ConnectedThread#0;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#11908#11971#0" expanded="false" />
+            <element signature="e#12918#12981#0" expanded="false" />
             <element signature="method#run#0;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
             <element signature="docComment;method#write#0;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
             <element signature="method#write#0;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
@@ -2302,8 +2523,69 @@
             <element signature="method#cancel#0;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
             <element signature="docComment;class#ConnectThread#0;class#MainActivity#0" expanded="false" />
             <element signature="method#ConnectThread#0;class#ConnectThread#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#13778#13839#0" expanded="false" />
-            <element signature="e#14582#14639#0" expanded="false" />
+            <element signature="e#14788#14849#0" expanded="false" />
+            <element signature="e#15592#15649#0" expanded="false" />
+            <element signature="docComment;method#cancel#0;class#ConnectThread#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#cancel#0;class#ConnectThread#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#manageConnectedSocket#0;class#ConnectThread#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#manageConnectedSocket#0;class#ConnectThread#0;class#MainActivity#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/finch_commander/Configuration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="51" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/finch_commander/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#MainActivity#0" expanded="false" />
+            <element signature="e#4181#4221#0" expanded="false" />
+            <element signature="method#findFinchServer#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#getPairedDevices#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#getPairedDevices#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#displayDevices#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#setState#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#setState#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#loadEarcons#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#loadEarcons#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#toggleRec#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#toggleRec#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#recognize#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;field#recListener#0;class#MainActivity#0" expanded="false" />
+            <element signature="class#10453:12017" expanded="false" />
+            <element signature="method#onStartedRecording#0;class#10453:12017" expanded="false" />
+            <element signature="method#onFinishedRecording#0;class#10453:12017" expanded="false" />
+            <element signature="method#onRecognition#0;class#10453:12017" expanded="false" />
+            <element signature="method#onSuccess#0;class#10453:12017" expanded="false" />
+            <element signature="method#onError#0;class#10453:12017" expanded="false" />
+            <element signature="e#11731#11821#0" expanded="false" />
+            <element signature="docComment;method#stopRecording#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#12099#12100#0" expanded="true" />
+            <element signature="e#12145#12146#0" expanded="true" />
+            <element signature="docComment;method#cancel#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;class#State#0;class#MainActivity#0" expanded="false" />
+            <element signature="class#State#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
+            <element signature="class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#ConnectedThread#0;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#12918#12981#0" expanded="false" />
+            <element signature="method#run#0;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#write#0;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#write#0;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#cancel#0;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#cancel#0;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;class#ConnectThread#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#ConnectThread#0;class#ConnectThread#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#14788#14849#0" expanded="false" />
+            <element signature="e#15592#15649#0" expanded="false" />
             <element signature="docComment;method#cancel#0;class#ConnectThread#0;class#MainActivity#0" expanded="false" />
             <element signature="method#cancel#0;class#ConnectThread#0;class#MainActivity#0" expanded="false" />
             <element signature="docComment;method#manageConnectedSocket#0;class#ConnectThread#0;class#MainActivity#0" expanded="false" />
@@ -2318,8 +2600,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="docComment;class#MainActivity#0" expanded="false" />
-            <element signature="method#onActivityResult#0;class#MainActivity#0" expanded="false" />
-            <element signature="docComment;method#findFinchServer#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#4181#4221#0" expanded="false" />
             <element signature="method#findFinchServer#0;class#MainActivity#0" expanded="false" />
             <element signature="docComment;method#getPairedDevices#0;class#MainActivity#0" expanded="false" />
             <element signature="method#getPairedDevices#0;class#MainActivity#0" expanded="false" />
@@ -2329,20 +2610,26 @@
             <element signature="docComment;method#loadEarcons#0;class#MainActivity#0" expanded="false" />
             <element signature="method#loadEarcons#0;class#MainActivity#0" expanded="false" />
             <element signature="docComment;method#toggleRec#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#toggleRec#0;class#MainActivity#0" expanded="false" />
             <element signature="docComment;method#recognize#0;class#MainActivity#0" expanded="false" />
             <element signature="docComment;field#recListener#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onSuccess#0;class#9447:11009" expanded="false" />
-            <element signature="method#onError#0;class#9447:11009" expanded="false" />
-            <element signature="e#10723#10813#0" expanded="false" />
+            <element signature="class#10453:12017" expanded="false" />
+            <element signature="method#onStartedRecording#0;class#10453:12017" expanded="false" />
+            <element signature="method#onFinishedRecording#0;class#10453:12017" expanded="false" />
+            <element signature="method#onRecognition#0;class#10453:12017" expanded="false" />
+            <element signature="method#onSuccess#0;class#10453:12017" expanded="false" />
+            <element signature="method#onError#0;class#10453:12017" expanded="false" />
+            <element signature="e#11731#11821#0" expanded="false" />
             <element signature="docComment;method#stopRecording#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#11091#11092#0" expanded="true" />
-            <element signature="e#11137#11138#0" expanded="true" />
-            <element signature="method#cancel#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#12099#12100#0" expanded="true" />
+            <element signature="e#12145#12146#0" expanded="true" />
+            <element signature="docComment;method#cancel#0;class#MainActivity#0" expanded="false" />
             <element signature="docComment;class#State#0;class#MainActivity#0" expanded="false" />
             <element signature="class#State#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
             <element signature="class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
             <element signature="method#ConnectedThread#0;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#11908#11971#0" expanded="false" />
+            <element signature="e#12918#12981#0" expanded="false" />
             <element signature="method#run#0;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
             <element signature="docComment;method#write#0;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
             <element signature="method#write#0;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
@@ -2350,8 +2637,8 @@
             <element signature="method#cancel#0;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
             <element signature="docComment;class#ConnectThread#0;class#MainActivity#0" expanded="false" />
             <element signature="method#ConnectThread#0;class#ConnectThread#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#13778#13839#0" expanded="false" />
-            <element signature="e#14582#14639#0" expanded="false" />
+            <element signature="e#14788#14849#0" expanded="false" />
+            <element signature="e#15592#15649#0" expanded="false" />
             <element signature="docComment;method#cancel#0;class#ConnectThread#0;class#MainActivity#0" expanded="false" />
             <element signature="method#cancel#0;class#ConnectThread#0;class#MainActivity#0" expanded="false" />
             <element signature="docComment;method#manageConnectedSocket#0;class#ConnectThread#0;class#MainActivity#0" expanded="false" />
@@ -2366,8 +2653,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="docComment;class#MainActivity#0" expanded="false" />
-            <element signature="method#onActivityResult#0;class#MainActivity#0" expanded="false" />
-            <element signature="docComment;method#findFinchServer#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#4181#4221#0" expanded="false" />
             <element signature="method#findFinchServer#0;class#MainActivity#0" expanded="false" />
             <element signature="docComment;method#getPairedDevices#0;class#MainActivity#0" expanded="false" />
             <element signature="method#getPairedDevices#0;class#MainActivity#0" expanded="false" />
@@ -2377,20 +2663,26 @@
             <element signature="docComment;method#loadEarcons#0;class#MainActivity#0" expanded="false" />
             <element signature="method#loadEarcons#0;class#MainActivity#0" expanded="false" />
             <element signature="docComment;method#toggleRec#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#toggleRec#0;class#MainActivity#0" expanded="false" />
             <element signature="docComment;method#recognize#0;class#MainActivity#0" expanded="false" />
             <element signature="docComment;field#recListener#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onSuccess#0;class#9447:11009" expanded="false" />
-            <element signature="method#onError#0;class#9447:11009" expanded="false" />
-            <element signature="e#10723#10813#0" expanded="false" />
+            <element signature="class#10453:12017" expanded="false" />
+            <element signature="method#onStartedRecording#0;class#10453:12017" expanded="false" />
+            <element signature="method#onFinishedRecording#0;class#10453:12017" expanded="false" />
+            <element signature="method#onRecognition#0;class#10453:12017" expanded="false" />
+            <element signature="method#onSuccess#0;class#10453:12017" expanded="false" />
+            <element signature="method#onError#0;class#10453:12017" expanded="false" />
+            <element signature="e#11731#11821#0" expanded="false" />
             <element signature="docComment;method#stopRecording#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#11091#11092#0" expanded="true" />
-            <element signature="e#11137#11138#0" expanded="true" />
-            <element signature="method#cancel#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#12099#12100#0" expanded="true" />
+            <element signature="e#12145#12146#0" expanded="true" />
+            <element signature="docComment;method#cancel#0;class#MainActivity#0" expanded="false" />
             <element signature="docComment;class#State#0;class#MainActivity#0" expanded="false" />
             <element signature="class#State#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
             <element signature="class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
             <element signature="method#ConnectedThread#0;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#11908#11971#0" expanded="false" />
+            <element signature="e#12918#12981#0" expanded="false" />
             <element signature="method#run#0;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
             <element signature="docComment;method#write#0;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
             <element signature="method#write#0;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
@@ -2398,8 +2690,8 @@
             <element signature="method#cancel#0;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
             <element signature="docComment;class#ConnectThread#0;class#MainActivity#0" expanded="false" />
             <element signature="method#ConnectThread#0;class#ConnectThread#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#13778#13839#0" expanded="false" />
-            <element signature="e#14582#14639#0" expanded="false" />
+            <element signature="e#14788#14849#0" expanded="false" />
+            <element signature="e#15592#15649#0" expanded="false" />
             <element signature="docComment;method#cancel#0;class#ConnectThread#0;class#MainActivity#0" expanded="false" />
             <element signature="method#cancel#0;class#ConnectThread#0;class#MainActivity#0" expanded="false" />
             <element signature="docComment;method#manageConnectedSocket#0;class#ConnectThread#0;class#MainActivity#0" expanded="false" />
@@ -2482,19 +2774,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.62068963">
-          <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values/values.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.21102661">
           <caret line="221" column="0" selection-start-line="221" selection-start-column="0" selection-end-line="221" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2502,7 +2785,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2918919">
           <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2510,44 +2792,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3243243">
           <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.862069">
-          <caret line="3" column="25" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
-          <folding>
-            <element signature="e#270#288#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36666667">
-          <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="58" column="31" selection-start-line="58" selection-start-column="31" selection-end-line="58" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2555,7 +2799,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.3793104">
           <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2563,18 +2806,78 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.0238094">
           <caret line="32" column="9" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.3448277">
+          <caret line="7" column="58" selection-start-line="7" selection-start-column="58" selection-end-line="7" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11960133">
+          <caret line="2" column="42" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="43" column="4" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/menu_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="39" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="39" />
+          <folding>
+            <element signature="e#355#380#0" expanded="true" />
+            <element signature="e#527#556#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Android/Sdk/sources/android-23/android/widget/TextView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8249" column="0" selection-start-line="8249" selection-start-column="0" selection-end-line="8249" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/finch_commander/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8455882">
-          <caret line="289" column="64" selection-start-line="289" selection-start-column="64" selection-end-line="289" selection-end-column="64" />
+        <state vertical-scroll-proportion="1.0718563">
+          <caret line="113" column="96" selection-start-line="113" selection-start-column="96" selection-end-line="113" selection-end-column="96" />
           <folding>
             <element signature="docComment;class#MainActivity#0" expanded="false" />
-            <element signature="method#onActivityResult#0;class#MainActivity#0" expanded="false" />
-            <element signature="docComment;method#findFinchServer#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#4181#4221#0" expanded="false" />
             <element signature="method#findFinchServer#0;class#MainActivity#0" expanded="false" />
             <element signature="docComment;method#getPairedDevices#0;class#MainActivity#0" expanded="false" />
             <element signature="method#getPairedDevices#0;class#MainActivity#0" expanded="false" />
@@ -2584,20 +2887,26 @@
             <element signature="docComment;method#loadEarcons#0;class#MainActivity#0" expanded="false" />
             <element signature="method#loadEarcons#0;class#MainActivity#0" expanded="false" />
             <element signature="docComment;method#toggleRec#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#toggleRec#0;class#MainActivity#0" expanded="false" />
             <element signature="docComment;method#recognize#0;class#MainActivity#0" expanded="false" />
             <element signature="docComment;field#recListener#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onSuccess#0;class#9447:11009" expanded="false" />
-            <element signature="method#onError#0;class#9447:11009" expanded="false" />
-            <element signature="e#10723#10813#0" expanded="false" />
+            <element signature="class#10453:12017" expanded="false" />
+            <element signature="method#onStartedRecording#0;class#10453:12017" expanded="false" />
+            <element signature="method#onFinishedRecording#0;class#10453:12017" expanded="false" />
+            <element signature="method#onRecognition#0;class#10453:12017" expanded="false" />
+            <element signature="method#onSuccess#0;class#10453:12017" expanded="false" />
+            <element signature="method#onError#0;class#10453:12017" expanded="false" />
+            <element signature="e#11731#11821#0" expanded="false" />
             <element signature="docComment;method#stopRecording#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#11091#11092#0" expanded="true" />
-            <element signature="e#11137#11138#0" expanded="true" />
-            <element signature="method#cancel#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#12099#12100#0" expanded="true" />
+            <element signature="e#12145#12146#0" expanded="true" />
+            <element signature="docComment;method#cancel#0;class#MainActivity#0" expanded="false" />
             <element signature="docComment;class#State#0;class#MainActivity#0" expanded="false" />
             <element signature="class#State#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
             <element signature="class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
             <element signature="method#ConnectedThread#0;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#11908#11971#0" expanded="false" />
+            <element signature="e#12918#12981#0" expanded="false" />
             <element signature="method#run#0;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
             <element signature="docComment;method#write#0;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
             <element signature="method#write#0;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
@@ -2605,8 +2914,8 @@
             <element signature="method#cancel#0;class#ConnectedThread#0;class#MainActivity#0" expanded="false" />
             <element signature="docComment;class#ConnectThread#0;class#MainActivity#0" expanded="false" />
             <element signature="method#ConnectThread#0;class#ConnectThread#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#13778#13839#0" expanded="false" />
-            <element signature="e#14582#14639#0" expanded="false" />
+            <element signature="e#14788#14849#0" expanded="false" />
+            <element signature="e#15592#15649#0" expanded="false" />
             <element signature="docComment;method#cancel#0;class#ConnectThread#0;class#MainActivity#0" expanded="false" />
             <element signature="method#cancel#0;class#ConnectThread#0;class#MainActivity#0" expanded="false" />
             <element signature="docComment;method#manageConnectedSocket#0;class#ConnectThread#0;class#MainActivity#0" expanded="false" />
